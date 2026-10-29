@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10122b">
+<meta name="description" content="INVERSION LAB — cẩm nang đảo ngữ tiếng Anh nâng cao cho học sinh chuyên Anh, với công thức, ví dụ, lỗi thường gặp và quiz tương tác.">
+<title>INVERSION LAB — Đảo ngữ nâng cao | Chuyên Anh</title>
+<style>
+:root{--bg:#090b18;--panel:#11152a;--panel2:#151a33;--ink:#f4f6ff;--muted:#a9b1d4;--line:rgba(181,194,255,.16);--cyan:#68f0e0;--pink:#ff78c8;--purple:#9b8cff;--yellow:#ffda7a;--green:#8af0ad;--shadow:0 24px 70px rgba(0,0,0,.28);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:radial-gradient(ellipse at 10% 0%,rgba(83,66,173,.18),transparent 35%),radial-gradient(ellipse at 95% 35%,rgba(36,178,180,.12),transparent 32%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:radial-gradient(rgba(255,255,255,.45) .7px,transparent .7px);background-size:27px 27px}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}button,input{font:inherit}button{cursor:pointer}.container{width:min(1160px,calc(100% - 36px));margin-inline:auto}.topline{height:4px;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink),var(--yellow));position:fixed;top:0;left:0;width:100%;z-index:1000;transform-origin:left;transform:scaleX(var(--progress,0))}
+.navbar{position:sticky;top:4px;z-index:100;background:rgba(9,11,24,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.08em;font-size:.92rem;color:var(--ink)}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),var(--purple));color:#10122b;font-size:1.15rem;box-shadow:0 0 24px rgba(104,240,224,.22)}.nav-links{display:flex;gap:19px;align-items:center}.nav-links a{font-size:.87rem;color:var(--muted);font-weight:650}.nav-links a:hover{color:var(--ink);text-decoration:none}.nav-cta,.button{border:0;border-radius:13px;font-weight:800;padding:11px 16px;background:linear-gradient(120deg,var(--cyan),#a0d9ff);color:#10122b;box-shadow:0 8px 24px rgba(104,240,224,.12);display:inline-flex;align-items:center;justify-content:center;gap:8px}.nav-cta:hover,.button:hover{transform:translateY(-2px);filter:brightness(1.05);text-decoration:none}.button.secondary{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);box-shadow:none}.button.pink{background:linear-gradient(120deg,var(--pink),#c3a1ff)}.menu-toggle{display:none;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:7px 10px}
+.hero{position:relative;padding:80px 0 58px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(104,240,224,.3);border-radius:999px;padding:7px 12px;background:rgba(104,240,224,.07);color:var(--cyan);font-size:.78rem;letter-spacing:.1em;font-weight:850;text-transform:uppercase}.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}h1{font-size:clamp(2.7rem,6vw,5.3rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 20px;font-weight:950}.gradient-text{background:linear-gradient(100deg,var(--cyan),#a5adff 45%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:1.1rem;color:var(--muted);max-width:650px;margin:0 0 26px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px}.stat{display:flex;flex-direction:column}.stat strong{font-size:1.25rem;color:var(--ink)}.stat span{font-size:.8rem;color:var(--muted)}.hero-visual{min-height:380px;position:relative;display:grid;place-items:center}.orbit{position:absolute;width:315px;height:315px;border:1px dashed rgba(155,140,255,.4);border-radius:50%;animation:spin 28s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:var(--pink);box-shadow:0 0 20px var(--pink)}.orbit:before{top:25px;left:46px}.orbit:after{bottom:28px;right:40px;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}@keyframes spin{to{transform:rotate(360deg)}}.core-card{position:relative;width:min(335px,90%);padding:25px;border:1px solid rgba(255,255,255,.16);border-radius:27px;background:linear-gradient(150deg,rgba(32,37,74,.94),rgba(15,18,39,.95));box-shadow:0 30px 100px rgba(69,71,194,.25);transform:rotate(-3deg)}.core-label{font-size:.72rem;letter-spacing:.12em;font-weight:900;color:var(--muted)}.core-before{margin-top:19px;color:#b0b8d9;font-size:.87rem}.core-after{font-size:1.25rem;font-weight:850;margin-top:5px}.core-after b{color:var(--cyan)}.arrow-down{color:var(--pink);font-size:1.7rem;margin:3px 0 0}.floating-tag{position:absolute;padding:10px 14px;border:1px solid var(--line);background:#161a35;border-radius:14px;box-shadow:var(--shadow);font-size:.82rem;font-weight:800}.tag-a{top:46px;right:0;color:var(--yellow);transform:rotate(5deg)}.tag-b{bottom:42px;left:0;color:var(--pink);transform:rotate(-5deg)}
+.section{padding:54px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:24px}.kicker{color:var(--pink);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:900}.section h2{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.035em;line-height:1.12;margin:7px 0 10px}.section-head p{margin:0;color:var(--muted);max-width:570px}.tiny-note{font-size:.84rem;color:var(--muted);max-width:280px}
+.panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(20,25,50,.92),rgba(13,16,34,.94));border-radius:var(--radius);padding:25px;box-shadow:var(--shadow)}.foundation-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.formula{border:1px solid rgba(104,240,224,.21);background:rgba(104,240,224,.055);padding:16px;border-radius:16px;margin:14px 0}.formula code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;white-space:normal;color:var(--cyan);font-size:1rem;font-weight:800}.formula small{display:block;color:var(--muted);margin-top:6px}.highlight{color:var(--yellow);font-weight:800}.plain{color:var(--muted)}.token-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.token{font-size:.78rem;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);color:#d7ddff}.callout{margin-top:14px;border-left:3px solid var(--yellow);padding:12px 14px;background:rgba(255,218,122,.06);color:#d5d9ee;border-radius:0 12px 12px 0;font-size:.91rem}.callout.good{border-left-color:var(--green);background:rgba(138,240,173,.055)}.callout.warn{border-left-color:var(--pink);background:rgba(255,120,200,.055)}
+.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.topic-card{position:relative;overflow:hidden}.topic-card:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--cyan),var(--purple),var(--pink));opacity:.8}.topic-head{display:flex;align-items:flex-start;gap:13px;margin-bottom:12px}.topic-icon{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;font-size:1.25rem;background:rgba(155,140,255,.12);border:1px solid rgba(155,140,255,.23)}.topic-head h3{margin:0;font-size:1.1rem;line-height:1.3}.topic-head p{margin:5px 0 0;color:var(--muted);font-size:.87rem}.topic-card .formula{margin:13px 0}.example{padding:13px 14px;border:1px solid rgba(255,255,255,.085);border-radius:13px;background:rgba(255,255,255,.025);margin-top:10px}.example .en{font-weight:750;color:#f5f6ff}.example .vi{font-size:.86rem;color:var(--muted);margin-top:3px}.example .tag{display:inline-block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);font-weight:900;margin-bottom:4px}.example em{font-style:normal;color:var(--pink)}.example strong{color:var(--cyan)}.two-examples{display:grid;grid-template-columns:1fr 1fr;gap:10px}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;margin-top:16px}table{width:100%;border-collapse:collapse;min-width:500px}th,td{text-align:left;vertical-align:top;padding:13px 15px;border-bottom:1px solid var(--line);font-size:.9rem}th{background:rgba(155,140,255,.1);color:#d9d4ff;font-size:.78rem;text-transform:uppercase;letter-spacing:.07em}tr:last-child td{border-bottom:0}.tag-pair{font-weight:850;color:var(--yellow);white-space:nowrap}
+.search-wrap{display:flex;gap:12px;align-items:center;max-width:500px;width:100%;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:14px;padding:0 14px}.search-wrap span{font-size:1.1rem}.search-wrap input{min-width:0;width:100%;background:transparent;border:0;outline:0;color:var(--ink);padding:13px 0}.search-wrap input::placeholder{color:#777f9f}.search-results{font-size:.8rem;color:var(--muted);margin-top:9px;min-height:18px}
+.flash-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.flashcard{min-height:152px;text-align:left;border:1px solid var(--line);border-radius:18px;background:linear-gradient(155deg,rgba(29,35,68,.9),rgba(16,20,42,.94));padding:18px;color:var(--ink);transition:transform .2s,border-color .2s;position:relative;overflow:hidden}.flashcard:hover{transform:translateY(-4px);border-color:rgba(104,240,224,.5)}.flashcard .fc-kicker{font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--pink)}.flashcard strong{display:block;font-size:1.05rem;margin:8px 0}.flashcard .fc-answer{color:var(--muted);font-size:.87rem;display:none}.flashcard.flipped .fc-answer{display:block}.flashcard.flipped strong{color:var(--cyan)}.flashcard .fc-hint{font-size:.72rem;color:#7983aa;position:absolute;bottom:12px;right:14px}.quiz-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:20px;align-items:start}.quiz-side{position:sticky;top:100px}.quiz-side .big-emoji{font-size:3rem}.quiz-side h3{font-size:1.4rem;line-height:1.2;margin:10px 0}.quiz-side p{color:var(--muted)}.progress-track{height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin:16px 0}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));transition:width .3s}.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--muted);font-size:.84rem}.question{font-size:1.2rem;font-weight:850;margin:18px 0}.choices{display:grid;gap:10px}.choice{display:flex;align-items:flex-start;text-align:left;gap:11px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025);padding:13px 14px;color:#e6eaff;transition:all .15s}.choice:hover:not(:disabled){border-color:rgba(104,240,224,.55);background:rgba(104,240,224,.06)}.choice .letter{display:grid;place-items:center;width:27px;height:27px;flex:0 0 auto;border-radius:8px;background:rgba(155,140,255,.13);color:var(--purple);font-size:.8rem;font-weight:900}.choice.correct{border-color:rgba(138,240,173,.65);background:rgba(138,240,173,.08)}.choice.correct .letter{background:var(--green);color:#0a1b13}.choice.incorrect{border-color:rgba(255,120,200,.65);background:rgba(255,120,200,.07)}.choice:disabled{cursor:default}.feedback{display:none;margin-top:14px;border-radius:14px;padding:14px;background:rgba(104,240,224,.07);border:1px solid rgba(104,240,224,.2)}.feedback.show{display:block}.feedback strong{color:var(--cyan)}.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:17px}.quiz-controls .button:disabled{opacity:.35;cursor:not-allowed;transform:none}.result-panel{text-align:center;padding:26px}.result-panel .score{font-size:3.4rem;font-weight:950;letter-spacing:-.05em;color:var(--cyan)}.result-panel h3{margin:0}.result-panel p{color:var(--muted)}
+.checklist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.check-item{padding:17px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:15px}.check-item .n{font-weight:950;font-size:1.3rem;color:var(--pink)}.check-item strong{display:block;margin:6px 0}.check-item p{margin:0;color:var(--muted);font-size:.88rem}
+.source-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.source-link{padding:10px 13px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);font-size:.84rem;color:#e1e6ff}.source-link:hover{border-color:rgba(104,240,224,.4);text-decoration:none}.footer{padding:35px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.87rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.backtop{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:#171b36;color:var(--cyan);font-size:1.2rem;box-shadow:var(--shadow);display:none;z-index:90}.backtop.show{display:block}.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.visible{opacity:1;transform:translateY(0)}.empty-state{display:none;padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}.no-js{padding:10px;background:#2a1931;color:#ffe5f4;text-align:center}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:20px}.hero{padding-top:56px}.hero-visual{min-height:310px}.orbit{width:260px;height:260px}.nav-links{gap:12px}.nav-links a{font-size:.78rem}.topic-grid{grid-template-columns:1fr}.flash-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quiz-layout{grid-template-columns:1fr}.quiz-side{position:static}.checklist{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.search-wrap{max-width:100%}}
+@media(max-width:560px){.container{width:min(100% - 24px,1160px)}.nav-inner{height:62px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:12px;right:12px;top:65px;padding:15px;border:1px solid var(--line);border-radius:16px;background:#10142a;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:7px 5px;font-size:.9rem}.nav-cta{display:none}.hero{padding:42px 0 35px}.hero-visual{min-height:275px}.orbit{width:220px;height:220px}.core-card{padding:18px;width:285px}.tag-a{right:-1px;top:13px}.tag-b{left:-2px;bottom:10px}.section{padding:38px 0}.panel{padding:18px}.foundation-grid{grid-template-columns:1fr}.flash-grid{gap:9px}.flashcard{padding:14px;min-height:160px}.two-examples{grid-template-columns:1fr}.hero-stats{gap:16px}.hero p{font-size:1rem}.quiz-controls{align-items:stretch}.quiz-controls .button{padding:10px 12px}.topic-head h3{font-size:1.02rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="topline" id="topline"></div>
+<nav class="navbar" aria-label="Điều hướng chính">
+  <div class="container nav-inner">
+    <a class="brand" href="#home" aria-label="INVERSION LAB - về đầu trang"><span class="brand-mark">↗</span><span>INVERSION <span class="gradient-text">LAB</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks"><a href="#blueprint">Nền tảng</a><a href="#patterns">Cấu trúc</a><a href="#flashcards">Flashcards</a><a href="#quiz">Thử thách</a><a href="#sources">Nguồn tham khảo</a></div>
+    <a class="nav-cta" href="#quiz">Làm quiz <span aria-hidden="true">↗</span></a>
+  </div>
+</nav>
+<noscript><div class="no-js">Trang vẫn đọc được khi tắt JavaScript; tính năng quiz, tìm kiếm và flashcards cần bật JavaScript.</div></noscript>
+<header class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow"><span class="dot"></span> Advanced English • Chuyên Anh</div>
+   <h1>Đảo ngữ.<br><span class="gradient-text">Đảo chiều.</span><br>Ghi điểm.</h1>
+   <p>Chào mừng đến với phòng thí nghiệm <strong>INVERSION LAB</strong> — giải mã đảo ngữ từ nền tảng đến nâng cao, học bằng sơ đồ, ví dụ có giải thích và bài tập tương tác.</p>
+   <div class="hero-actions"><a class="button" href="#patterns">Khám phá cấu trúc <span>↓</span></a><a class="button secondary" href="#blueprint">Nắm công thức gốc</a></div>
+   <div class="hero-stats"><div class="stat"><strong>08+</strong><span>nhóm cấu trúc trọng tâm</span></div><div class="stat"><strong>12</strong><span>câu hỏi luyện tập</span></div><div class="stat"><strong>C1–C2</strong><span>định hướng nâng cao</span></div></div>
+  </div>
+  <div class="hero-visual" aria-label="Ví dụ minh họa chuyển câu thường thành câu đảo ngữ">
+   <div class="orbit"></div>
+   <div class="floating-tag tag-a">⚡ Emphasis</div><div class="floating-tag tag-b">🧠 Word order</div>
+   <div class="core-card"><div class="core-label">FROM ORDINARY → POWERFUL</div><div class="core-before">Normal order</div><div class="core-after">I had <span class="plain">never</span> seen this.</div><div class="arrow-down">↓</div><div class="core-before">Inversion</div><div class="core-after"><b>Never had I</b> seen this.</div><div class="token-row"><span class="token">negative adverbial</span><span class="token">auxiliary first</span></div></div>
+  </div>
+ </div>
+</header>
+<main>
+<section class="section" id="blueprint">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">01 / The blueprint</div><h2>Nắm “bộ não” của đảo ngữ</h2><p>Đừng học thuộc từng câu riêng lẻ. Hãy xác định phần nào được đưa lên đầu, rồi tìm động từ hữu hạn cần đảo.</p></div></div>
+  <div class="foundation-grid">
+   <article class="panel reveal">
+    <div class="topic-head"><div class="topic-icon">🧩</div><div><h3>Công thức nền tảng</h3><p>Đảo ngữ một phần trong câu trần thuật</p></div></div>
+    <div class="formula"><code>Trigger + AUX / MODAL + S + V…</code><small>Trigger = từ/cụm từ kích hoạt đảo ngữ · S = chủ ngữ · AUX = trợ động từ</small></div>
+    <p>Ví dụ: <strong>Rarely do we encounter</strong> such dedication. — Hiếm khi chúng ta bắt gặp sự tận tâm như vậy.</p>
+    <div class="callout good"><strong>Mẹo nhớ:</strong> Nếu câu không có trợ động từ sẵn, thường dùng <em>do / does / did</em> (và đưa động từ chính về nguyên mẫu).</div>
+   </article>
+   <article class="panel reveal">
+    <div class="topic-head"><div class="topic-icon">⚙️</div><div><h3>Chọn đúng “trợ thủ”</h3><p>Không đảo bừa động từ chính</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Tình huống</th><th>Cách đảo</th></tr></thead><tbody>
+     <tr><td>Có <strong>be</strong></td><td><span class="tag-pair">is/was + S</span><br><span class="plain">Rarely was he so quiet.</span></td></tr>
+     <tr><td>Có trợ động từ / modal</td><td><span class="tag-pair">aux/modal + S</span><br><span class="plain">Never have I doubted you.</span></td></tr>
+     <tr><td>Hiện tại đơn / quá khứ đơn, không có aux</td><td><span class="tag-pair">do/does/did + S + V</span><br><span class="plain">Seldom does she complain.</span></td></tr>
+    </tbody></table></div>
+   </article>
+  </div>
+  <div class="callout warn"><strong>Quy tắc vàng:</strong> Với <em>Only when / Only after / Not until</em>, ta đảo ở <strong>mệnh đề chính</strong>, không đảo bên trong mệnh đề theo sau cụm thời gian. Ví dụ: <em>Only when the bell rang <strong>did the students leave</strong>.</em></div>
+ </div>
+</section>
+<section class="section" id="patterns">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">02 / Pattern library</div><h2>Thư viện cấu trúc đảo ngữ</h2><p>Từ dạng thường gặp trong đề chuyên đến dạng nâng cao hữu ích cho writing và reading. Gõ từ khóa để lọc nhanh.</p></div>
+  <div><label class="search-wrap"><span>⌕</span><input id="lessonSearch" type="search" placeholder="Tìm: never, only, conditional…" aria-label="Tìm cấu trúc đảo ngữ"></label><div class="search-results" id="searchResults" aria-live="polite">Đang hiển thị tất cả cấu trúc.</div></div></div>
+  <div class="topic-grid" id="topicGrid">
+   <article class="panel topic-card reveal" data-search="negative adverbials never rarely seldom little hardly ever scarcely barely negative phủ định">
+    <div class="topic-head"><div class="topic-icon">🚫</div><div><h3>1. Trạng từ / cụm phủ định</h3><p>Negative adverbials · nhấn mạnh tần suất, mức độ phủ định</p></div></div>
+    <div class="formula"><code>Negative trigger + AUX + S + V…</code></div>
+    <div class="token-row"><span class="token">never</span><span class="token">rarely</span><span class="token">seldom</span><span class="token">little</span><span class="token">hardly ever</span><span class="token">at no time</span><span class="token">in no way</span><span class="token">under no circumstances</span></div>
+    <div class="example"><span class="tag">Everyday → Advanced</span><div class="en">I had never encountered such a complex problem.</div><div class="en"><strong>Never had I encountered</strong> such a complex problem.</div><div class="vi">Tôi chưa từng gặp vấn đề phức tạp đến vậy.</div></div>
+    <div class="example"><div class="en"><strong>Under no circumstances should</strong> confidential data be shared.</div><div class="vi">Trong bất kỳ hoàn cảnh nào cũng không được chia sẻ dữ liệu mật.</div></div>
+    <div class="example"><div class="en"><strong>Little did she realise</strong> how much the decision would change her life.</div><div class="vi">Cô ấy không hề nhận ra quyết định đó sẽ thay đổi cuộc đời mình nhiều thế nào.</div></div>
+    <div class="callout">Lưu ý: <em>little</em> ở đây mang nghĩa “hầu như không / không hề biết”, không phải “một ít”.</div>
+   </article>
+   <article class="panel topic-card reveal" data-search="only after only when only if only then only later not until till time condition">
+    <div class="topic-head"><div class="topic-icon">⏳</div><div><h3>2. Only… / Not until</h3><p>Nhấn mạnh điều kiện, thời điểm hoặc cách thức</p></div></div>
+    <div class="formula"><code>Only + phrase/clause + AUX + S + V…</code><small>Not until + clause/time + AUX + S + V…</small></div>
+    <div class="token-row"><span class="token">only after</span><span class="token">only when</span><span class="token">only if</span><span class="token">only by</span><span class="token">only then</span><span class="token">not until</span></div>
+    <div class="example"><div class="en"><strong>Only after the meeting had ended did</strong> we discover the missing file.</div><div class="vi">Chỉ sau khi cuộc họp kết thúc, chúng tôi mới phát hiện tệp bị mất.</div></div>
+    <div class="example"><div class="en"><strong>Only by practising daily can</strong> you achieve fluency.</div><div class="vi">Chỉ bằng cách luyện tập mỗi ngày, bạn mới có thể nói trôi chảy.</div></div>
+    <div class="example"><div class="en"><strong>Not until midnight did</strong> the final train arrive.</div><div class="vi">Mãi đến nửa đêm chuyến tàu cuối cùng mới tới.</div></div>
+    <div class="callout warn">Không viết: <em>Only after had the meeting ended…</em> ✅ Viết: <em>Only after the meeting had ended <strong>did we discover</strong>…</em> Mệnh đề sau <em>after/when/until</em> vẫn theo trật tự bình thường.</div>
+   </article>
+   <article class="panel topic-card reveal" data-search="no sooner than hardly when scarcely barely when before sequence past perfect">
+    <div class="topic-head"><div class="topic-icon">⚡</div><div><h3>3. No sooner / Hardly / Scarcely</h3><p>Hai hành động nối tiếp gần như ngay lập tức</p></div></div>
+    <div class="formula"><code>No sooner + had + S + V3 + than…</code><small>Hardly / Scarcely / Barely + had + S + V3 + when…</small></div>
+    <div class="example"><div class="en"><strong>No sooner had I sat down than</strong> the phone rang.</div><div class="vi">Tôi vừa ngồi xuống thì điện thoại reo.</div></div>
+    <div class="example"><div class="en"><strong>Hardly had the match begun when</strong> it started raining.</div><div class="vi">Trận đấu vừa bắt đầu thì trời đổ mưa.</div></div>
+    <div class="token-row"><span class="token">NO SOONER → THAN</span><span class="token">HARDLY / SCARCELY → WHEN</span></div>
+    <div class="callout good">Mẹo nhớ nhanh: <strong>no sooner—than</strong>; <strong>hardly/scarcely/barely—when</strong>. Dạng chuẩn trong đề thường dùng past perfect ở mệnh đề đảo.</div>
+   </article>
+   <article class="panel topic-card reveal" data-search="not only but also never before not since not for a moment nowhere negative paired conjunction">
+    <div class="topic-head"><div class="topic-icon">🎯</div><div><h3>4. Not only… but also</h3><p>Nhấn mạnh hai ý; đảo ở mệnh đề mở đầu</p></div></div>
+    <div class="formula"><code>Not only + AUX + S + V…, but (S) also…</code></div>
+    <div class="example"><div class="en"><strong>Not only did Maya win</strong> the debate, but she also earned the highest score.</div><div class="vi">Maya không chỉ thắng cuộc tranh biện mà còn đạt điểm cao nhất.</div></div>
+    <div class="example"><div class="en"><strong>Not only is the proposal ambitious,</strong> but it is also feasible.</div><div class="vi">Đề xuất không chỉ tham vọng mà còn khả thi.</div></div>
+    <div class="token-row"><span class="token">Never before…</span><span class="token">Not since…</span><span class="token">Not for one moment…</span><span class="token">Nowhere…</span></div>
+    <div class="example"><div class="en"><strong>Not since childhood have I felt</strong> so carefree.</div><div class="vi">Từ thời thơ ấu đến giờ, tôi chưa từng thấy vô tư đến thế.</div></div>
+    <div class="callout">Giữ cấu trúc song song sau <em>but also</em>. Chỉ mệnh đề bắt đầu bằng <em>Not only</em> cần đảo trong mẫu nhấn mạnh thông dụng này.</div>
+   </article>
+   <article class="panel topic-card reveal" data-search="conditional inversion should were had if conditionals type 1 type 2 type 3 hypothetical">
+    <div class="topic-head"><div class="topic-icon">🔀</div><div><h3>5. Đảo ngữ câu điều kiện</h3><p>Bỏ if, đưa should / were / had lên trước chủ ngữ</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Dạng</th><th>Công thức</th></tr></thead><tbody>
+     <tr><td><strong>Loại 1 / khả năng</strong></td><td><span class="tag-pair">Should + S + V</span></td></tr>
+     <tr><td><strong>Loại 2 / giả định</strong></td><td><span class="tag-pair">Were + S (+ to V)</span></td></tr>
+     <tr><td><strong>Loại 3 / trái quá khứ</strong></td><td><span class="tag-pair">Had + S + V3</span></td></tr>
+    </tbody></table></div>
+    <div class="example"><div class="en"><strong>Should you require</strong> further information, please contact us.</div><div class="vi">Nếu cần thêm thông tin, vui lòng liên hệ chúng tôi.</div></div>
+    <div class="example"><div class="en"><strong>Were I to accept</strong> the offer, I would have to relocate.</div><div class="vi">Nếu tôi nhận lời đề nghị ấy, tôi sẽ phải chuyển nơi ở.</div></div>
+    <div class="example"><div class="en"><strong>Had we left</strong> earlier, we would have caught the train.</div><div class="vi">Giá mà chúng tôi đi sớm hơn thì đã kịp chuyến tàu.</div></div>
+    <div class="callout warn">Phủ định đặt <strong>sau chủ ngữ</strong>: <em>Had I not forgotten</em>… / <em>Were she not so busy</em>… Không dùng <em>Had not I…</em> trong mẫu này.</div>
+   </article>
+   <article class="panel topic-card reveal" data-search="so such that result so adjective adverb such noun degree inversion">
+    <div class="topic-head"><div class="topic-icon">🌊</div><div><h3>6. So… that / Such… that</h3><p>Đảo để nhấn mạnh mức độ dẫn đến kết quả</p></div></div>
+    <div class="formula"><code>So + adj/adv + be/aux + S + that…</code><small>Such + be + (a/an) + noun phrase + that…</small></div>
+    <div class="example"><div class="en"><strong>So compelling was her argument that</strong> even her critics agreed.</div><div class="vi">Lập luận của cô ấy thuyết phục đến mức ngay cả những người chỉ trích cũng đồng ý.</div></div>
+    <div class="example"><div class="en"><strong>So quickly did the situation change that</strong> we could barely keep up.</div><div class="vi">Tình hình thay đổi nhanh đến nỗi chúng tôi hầu như không theo kịp.</div></div>
+    <div class="example"><div class="en"><strong>Such was the force of the wind that</strong> several trees fell.</div><div class="vi">Gió mạnh đến mức vài cây bị đổ.</div></div>
+    <div class="callout">Chỉ dùng <em>so</em> trước tính từ/trạng từ trong mẫu trên; <em>such</em> thường đi với cụm danh từ. Không phải mọi câu có “so…that” đều tự động cần đảo ngữ.</div>
+   </article>
+   <article class="panel topic-card reveal" data-search="place inversion here comes there goes location fronted place adverbial">
+    <div class="topic-head"><div class="topic-icon">📍</div><div><h3>7. Đảo ngữ chỉ nơi chốn</h3><p>Locative inversion · văn kể chuyện / miêu tả</p></div></div>
+    <div class="formula"><code>Place expression + verb + noun subject</code><small>Thường dùng với động từ như stand, sit, lie, come, go, appear.</small></div>
+    <div class="example"><div class="en">At the end of the corridor <strong>stood an ancient statue</strong>.</div><div class="vi">Cuối hành lang có một bức tượng cổ đứng đó.</div></div>
+    <div class="example"><div class="en">On the horizon <strong>appeared a fleet of ships</strong>.</div><div class="vi">Một hạm đội tàu xuất hiện ở đường chân trời.</div></div>
+    <div class="example"><div class="en"><strong>Here comes the bus!</strong> / <strong>There goes our last chance.</strong></div><div class="vi">Xe buýt tới rồi! / Thế là cơ hội cuối cùng của chúng ta đi mất.</div></div>
+    <div class="callout warn">Với đại từ, thường giữ trật tự bình thường: <em>Here he comes</em> (không phải <em>Here comes he</em>). Đây là đảo chủ ngữ–động từ theo kiểu miêu tả, khác mẫu đảo trợ động từ sau trạng từ phủ định.</div>
+   </article>
+   <article class="panel topic-card reveal" data-search="so do i neither nor agreement response positive negative auxiliary">
+    <div class="topic-head"><div class="topic-icon">🤝</div><div><h3>8. So / Neither / Nor</h3><p>Đồng tình: “tôi cũng vậy” / “tôi cũng không”</p></div></div>
+    <div class="formula"><code>So + AUX / BE / MODAL + S</code><small>Neither / Nor + AUX / BE / MODAL + S (ý phủ định)</small></div>
+    <div class="example"><div class="en">“I love solving puzzles.” — “<strong>So do I.</strong>”</div><div class="vi">“Mình thích giải câu đố.” — “Mình cũng vậy.”</div></div>
+    <div class="example"><div class="en">“She can’t attend.” — “<strong>Neither can I.</strong>”</div><div class="vi">“Cô ấy không thể tham dự.” — “Mình cũng không.”</div></div>
+    <div class="example"><div class="en">He has never been there, <strong>nor have I</strong>.</div><div class="vi">Anh ấy chưa từng tới đó, tôi cũng vậy.</div></div>
+    <div class="callout">Chọn trợ động từ theo câu trước: <em>is → so am I</em>; <em>can → so can I</em>; động từ thường ở hiện tại đơn → <em>so do I</em>. Đừng nhầm với <em>So beautiful was the view that…</em> (nhấn mạnh mức độ).</div>
+   </article>
+  </div>
+  <div class="empty-state" id="emptyState">Không tìm thấy cấu trúc phù hợp. Thử từ khóa khác nhé.</div>
+ </div>
+</section>
+<section class="section" id="flashcards">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">03 / Quick recall</div><h2>Flashcards: lật thẻ, nhớ nhanh</h2><p>Bấm vào thẻ để hiện công thức hoặc cặp từ khóa cần nhớ.</p></div></div>
+  <div class="flash-grid">
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Trigger</span><strong>No sooner…</strong><span class="fc-answer">…than. Dạng đề thường gặp: No sooner had + S + V3 + than + past simple.</span><span class="fc-hint">Bấm để lật ↻</span></button>
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Trigger</span><strong>Hardly / Scarcely…</strong><span class="fc-answer">…when (hoặc before). Nhớ cặp: hardly/scarcely—when.</span><span class="fc-hint">Bấm để lật ↻</span></button>
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Conditional</span><strong>Had + S + V3</strong><span class="fc-answer">Dùng cho điều kiện loại 3 khi bỏ if: Had I known, I would have helped.</span><span class="fc-hint">Bấm để lật ↻</span></button>
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Position</span><strong>Only after…</strong><span class="fc-answer">Đảo ở mệnh đề chính phía sau: Only after X did S + V.</span><span class="fc-hint">Bấm để lật ↻</span></button>
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Negative</span><strong>Under no circumstances…</strong><span class="fc-answer">Under no circumstances should + S + V. Cấu trúc nhấn mạnh lệnh cấm.</span><span class="fc-hint">Bấm để lật ↻</span></button>
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Conditional</span><strong>Were + S…</strong><span class="fc-answer">Đảo điều kiện giả định: Were I you… / Were she to apply…</span><span class="fc-hint">Bấm để lật ↻</span></button>
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Agreement</span><strong>Neither do I.</strong><span class="fc-answer">Dùng để đồng tình với một phát biểu phủ định. Chọn aux theo câu trước.</span><span class="fc-hint">Bấm để lật ↻</span></button>
+   <button class="flashcard reveal" type="button" aria-expanded="false"><span class="fc-kicker">Trap</span><strong>Only when + clause…</strong><span class="fc-answer">Mệnh đề after/when giữ S + V; mệnh đề chính mới đảo: Only when she arrived did we start.</span><span class="fc-hint">Bấm để lật ↻</span></button>
+  </div>
+ </div>
+</section>
+<section class="section" id="exam-traps">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">04 / Exam radar</div><h2>Bẫy thường gặp trong đề chuyên</h2><p>Đảo đúng trật tự thôi chưa đủ — phải giữ đúng thì, dạng động từ và quan hệ giữa các mệnh đề.</p></div></div>
+  <div class="checklist">
+   <article class="check-item reveal"><div class="n">01</div><strong>Thiếu trợ động từ</strong><p>❌ Rarely she goes…<br>✅ Rarely <b>does she go</b>…</p></article>
+   <article class="check-item reveal"><div class="n">02</div><strong>Sai dạng động từ</strong><p>❌ Seldom does he <em>goes</em>…<br>✅ Seldom does he <b>go</b>…</p></article>
+   <article class="check-item reveal"><div class="n">03</div><strong>Nhầm cặp liên từ</strong><p>✅ No sooner… <b>than</b><br>✅ Hardly/Scarcely… <b>when</b></p></article>
+   <article class="check-item reveal"><div class="n">04</div><strong>Đảo sai mệnh đề</strong><p>✅ Only after I arrived <b>did she call</b>.<br>Mệnh đề after không đảo.</p></article>
+   <article class="check-item reveal"><div class="n">05</div><strong>Quên bỏ if đúng cách</strong><p>✅ Had I known…<br>❌ Had if I known…</p></article>
+   <article class="check-item reveal"><div class="n">06</div><strong>Biến câu trần thuật thành câu hỏi</strong><p>Đảo ngữ nhấn mạnh vẫn là câu trần thuật, không tự thêm dấu hỏi.</p></article>
+  </div>
+  <div class="panel reveal" style="margin-top:18px"><div class="topic-head"><div class="topic-icon">🧭</div><div><h3>Vùng nâng cao: fronting không phải lúc nào cũng là đảo ngữ AUX + S</h3><p>Nhận biết để không áp nhầm công thức</p></div></div>
+   <p><strong>Concessive fronting:</strong> <em>Busy as she was, she still made time to help.</em> (Dù bận, cô ấy vẫn dành thời gian giúp đỡ.) — Đây là cấu trúc nhượng bộ có thành phần được đưa lên đầu, không phải mẫu “negative trigger + auxiliary + subject”.</p>
+   <p><strong>Comparative correlative:</strong> <em>The more you read, the more confident you become.</em> (Bạn càng đọc nhiều, bạn càng tự tin.) — Đây là cấu trúc so sánh tương ứng, không phải dạng đảo trợ động từ điển hình.</p>
+   <p class="plain">Mẹo cho bài chuyên Anh: trước khi viết lại, hãy gọi tên đúng cấu trúc. Đừng gom mọi hiện tượng đưa thành phần lên đầu câu vào cùng một công thức.</p>
+  </div>
+ </div>
+</section>
+<section class="section" id="quiz">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">05 / Challenge mode</div><h2>Kiểm tra phản xạ đảo ngữ</h2><p>12 câu trắc nghiệm từ nhận diện công thức đến phân biệt bẫy nâng cao. Chọn một đáp án, xem giải thích, rồi sang câu tiếp theo.</p></div></div>
+  <div class="quiz-layout">
+   <aside class="panel quiz-side reveal"><div class="big-emoji">🧪</div><h3>Inversion<br>Challenge</h3><p>Mỗi câu đúng được 1 điểm. Đọc cả giải thích — mục tiêu là hiểu lý do, không chỉ đoán đáp án.</p><div class="progress-track"><div class="progress-fill" id="quizProgress"></div></div><div class="quiz-top"><span id="progressText">Câu 1 / 12</span><strong id="scoreText">Điểm: 0</strong></div><div class="callout good">Pro tip: hãy xác định trigger trước, rồi mới chọn trợ động từ và thì.</div></aside>
+   <div class="panel reveal" id="quizPanel">
+    <div id="questionArea">
+     <div class="quiz-top"><span id="qNumber">QUESTION 01</span><span>CHỌN 1 ĐÁP ÁN</span></div>
+     <div class="question" id="questionText">Only after the results were published ___ the truth.</div>
+     <div class="choices" id="choices"></div>
+     <div class="feedback" id="feedback" aria-live="polite"></div>
+     <div class="quiz-controls"><button class="button secondary" id="restartQuiz" type="button">↻ Làm lại</button><button class="button" id="nextQuestion" type="button" disabled>Câu tiếp theo →</button></div>
+    </div>
+    <div id="resultArea" class="result-panel" hidden><div class="big-emoji">🏁</div><div class="score" id="finalScore">0/12</div><h3 id="resultTitle">Hoàn thành thử thách!</h3><p id="resultMessage">Mỗi lỗi sai là một cơ hội ôn tập.</p><button class="button" id="playAgain" type="button">Làm lại từ đầu ↻</button></div>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="section" id="sources">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">06 / Further reading</div><h2>Đọc thêm từ nguồn đáng tin cậy</h2><p>Nội dung trên trang được diễn giải, tổ chức lại để học tập; ví dụ minh họa chủ yếu được biên soạn riêng. Tham khảo các bài dưới đây để đọc sâu hơn.</p></div></div>
+  <div class="panel reveal">
+   <div class="source-list">
+    <a class="source-link" href="https://vn.elsaspeak.com/kien-thuc-ve-dao-ngu-trong-tieng-anh/" target="_blank" rel="noopener noreferrer">📘 ELSA Speak — Tổng hợp đảo ngữ</a>
+    <a class="source-link" href="https://ielts.idp.com/vietnam/about/news-and-articles/article-inversion" target="_blank" rel="noopener noreferrer">🎓 IDP IELTS Việt Nam — Inversion</a>
+    <a class="source-link" href="https://learnenglish.britishcouncil.org/free-resources/grammar/c1/inversion-after-negative-adverbials" target="_blank" rel="noopener noreferrer">🌐 British Council — Negative adverbials</a>
+    <a class="source-link" href="https://learnenglish.britishcouncil.org/free-resources/grammar/c1/inversion-conditionals" target="_blank" rel="noopener noreferrer">🔀 British Council — Inversion in conditionals</a>
+    <a class="source-link" href="https://dictionary.cambridge.org/grammar/british-grammar/inversion" target="_blank" rel="noopener noreferrer">📚 Cambridge Dictionary — Inversion</a>
+    <a class="source-link" href="https://dictionary.cambridge.org/grammar/british-grammar/conditionals-other-expressions-unless-should-as-long-as" target="_blank" rel="noopener noreferrer">🧠 Cambridge — Conditional inversion</a>
+   </div>
+   <div class="callout">Lưu ý học thuật: đây là cẩm nang tổng hợp các mẫu đảo ngữ trọng tâm và một số dạng mở rộng hữu ích, không tuyên bố liệt kê mọi biến thể văn chương hiếm gặp của tiếng Anh. Khi làm bài, ưu tiên ngữ cảnh và quy ước của đề thi.</div>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div><strong style="color:var(--ink)">INVERSION LAB</strong><br>Học ngữ pháp có hệ thống. Viết câu có chủ đích.</div><div>Made for English learners · Chuyên Anh edition<br><a href="#home">Về đầu trang ↑</a></div></div></footer>
+<button class="backtop" id="backtop" type="button" aria-label="Về đầu trang">↑</button>
+<script>
+(function(){
+"use strict";
+var topLine=document.getElementById("topline");
+function updateScroll(){
+ var doc=document.documentElement;
+ var max=doc.scrollHeight-doc.clientHeight;
+ topLine.style.setProperty("--progress",max>0?(doc.scrollTop/max):0);
+ document.getElementById("backtop").classList.toggle("show",doc.scrollTop>500);
+}
+window.addEventListener("scroll",updateScroll,{passive:true});updateScroll();
+document.getElementById("backtop").addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+var menuToggle=document.getElementById("menuToggle"),navLinks=document.getElementById("navLinks");
+menuToggle.addEventListener("click",function(){var open=navLinks.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));});
+navLinks.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){navLinks.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");});});
+var revealObserver;
+if("IntersectionObserver" in window){
+ revealObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target);}});},{threshold:.09});
+ document.querySelectorAll(".reveal").forEach(function(el){revealObserver.observe(el);});
+}else{document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("visible");});}
+var search=document.getElementById("lessonSearch"),cards=Array.from(document.querySelectorAll(".topic-card")),empty=document.getElementById("emptyState"),searchResults=document.getElementById("searchResults");
+search.addEventListener("input",function(){
+ var term=search.value.trim().toLowerCase(),shown=0;
+ cards.forEach(function(card){var match=!term||(card.innerText+" "+(card.dataset.search||"")).toLowerCase().indexOf(term)!==-1;card.style.display=match?"":"none";if(match)shown++;});
+ empty.style.display=shown?"none":"block";
+ searchResults.textContent=term?("Tìm thấy "+shown+" / "+cards.length+" nhóm cấu trúc."):"Đang hiển thị tất cả cấu trúc.";
+});
+document.querySelectorAll(".flashcard").forEach(function(card){card.addEventListener("click",function(){var flipped=card.classList.toggle("flipped");card.setAttribute("aria-expanded",String(flipped));});});
+var questions=[
+ {q:"Only after the results were published ___ the truth.",c:["we discovered","did we discover","we had discovered","had we discovered"],a:1,e:"Only after + mệnh đề thời gian đứng đầu câu thì mệnh đề chính đảo. Vì động từ chính ở quá khứ đơn, dùng did + S + V nguyên mẫu."},
+ {q:"___ had the lecture begun than the fire alarm went off.",c:["Hardly","No sooner","Scarcely","Barely"],a:1,e:"Cặp cố định trong mẫu đảo ngữ: No sooner… than. Hardly / scarcely / barely thường đi với when (hoặc before)."},
+ {q:"Under no circumstances ___ personal details online.",c:["you should post","should you post","you post should","do you should post"],a:1,e:"Cụm phủ định ở đầu câu kéo theo đảo trợ động từ/modal và chủ ngữ: Under no circumstances should + S + V."},
+ {q:"If I had known about the delay, I would have stayed home. → ___ about the delay, I would have stayed home.",c:["Had I known","Have I known","Did I know","Were I known"],a:0,e:"Điều kiện loại 3 bỏ if bằng cách đưa had lên đầu: Had + S + V3."},
+ {q:"Chọn câu đúng.",c:["Rarely she has seen such talent.","Rarely has she seen such talent.","Rarely did she saw such talent.","Rarely she saw such talent."],a:1,e:"Với hiện tại hoàn thành, đảo have/has lên trước chủ ngữ: Rarely has she seen… Không thêm did khi đã có has."},
+ {q:"Not until the final chapter ___ the mystery.",c:["I understood","did I understand","I had understood","had understood I"],a:1,e:"Not until đứng đầu câu thì đảo ở mệnh đề chính: Not until + clause + did + S + V."},
+ {q:"___ you need any assistance, please contact the front desk.",c:["Were","Had","Should","Did"],a:2,e:"Should + S + V có thể thay If + present simple trong điều kiện có khả năng xảy ra hoặc lời đề nghị lịch sự."},
+ {q:"Hardly had he stepped outside ___ it began to pour.",c:["than","then","when","that"],a:2,e:"Hardly… when/before; No sooner… than. Đây là cặp liên từ thường được kiểm tra."},
+ {q:"Chọn câu đảo ngữ đúng từ: “The room was so quiet that I could hear the clock.”",c:["So quiet the room was that I could hear the clock.","So quiet was the room that I could hear the clock.","So quiet did the room that I could hear the clock.","Such quiet was the room that I could hear the clock."],a:1,e:"So + adjective + be + subject + that… → So quiet was the room that… Vì có be, đảo was, không dùng did."},
+ {q:"Câu nào đồng tình với “I can’t swim”?",c:["So can I.","Neither can I.","Neither do I.","Nor I can."],a:1,e:"Đồng tình với phát biểu phủ định: Neither/Nor + auxiliary/modal + S. Câu trước dùng can nên câu đáp cũng dùng can."},
+ {q:"Câu nào đúng khi dùng đảo ngữ nơi chốn?",c:["Here comes he.","Here does he come!","Here he comes!","Here is comes he."],a:2,e:"Với đại từ, thường giữ trật tự chủ ngữ trước động từ: Here he comes. Với danh từ có thể nói: Here comes the bus."},
+ {q:"Hoàn thành: “Not only ___ the competition, but she also broke the record.”",c:["she won","did she win","won she","she did won"],a:1,e:"Not only ở đầu mệnh đề cần đảo. Với động từ thường ở quá khứ đơn: did + S + V nguyên mẫu → did she win."}
+];
+var index=0,score=0,answered=false;
+var questionText=document.getElementById("questionText"),choices=document.getElementById("choices"),feedback=document.getElementById("feedback"),next=document.getElementById("nextQuestion"),progressText=document.getElementById("progressText"),scoreText=document.getElementById("scoreText"),quizProgress=document.getElementById("quizProgress"),qNumber=document.getElementById("qNumber"),questionArea=document.getElementById("questionArea"),resultArea=document.getElementById("resultArea");
+function loadQuestion(){
+ answered=false;var item=questions[index];
+ questionArea.hidden=false;resultArea.hidden=true;
+ qNumber.textContent="QUESTION "+String(index+1).padStart(2,"0");
+ progressText.textContent="Câu "+(index+1)+" / "+questions.length;
+ scoreText.textContent="Điểm: "+score;
+ quizProgress.style.width=(index/questions.length*100)+"%";
+ questionText.textContent=item.q;choices.innerHTML="";feedback.className="feedback";feedback.textContent="";
+ item.c.forEach(function(choice,i){
+  var btn=document.createElement("button");btn.type="button";btn.className="choice";
+  var letter=document.createElement("span");letter.className="letter";letter.textContent=String.fromCharCode(65+i);
+  var text=document.createElement("span");text.textContent=choice;
+  btn.appendChild(letter);btn.appendChild(text);btn.addEventListener("click",function(){selectAnswer(i);});choices.appendChild(btn);
+ });
+ next.disabled=true;next.textContent=index===questions.length-1?"Xem kết quả →":"Câu tiếp theo →";
+}
+function selectAnswer(selected){
+ if(answered)return;answered=true;var item=questions[index],btns=Array.from(choices.querySelectorAll("button"));
+ btns.forEach(function(btn,i){btn.disabled=true;if(i===item.a)btn.classList.add("correct");if(i===selected&&selected!==item.a)btn.classList.add("incorrect");});
+ if(selected===item.a)score++;
+ feedback.className="feedback show";
+ var heading=document.createElement("strong");heading.textContent=selected===item.a?"✓ Chính xác!":"↻ Chưa đúng — mình cùng xem lại nhé.";
+ var explanation=document.createElement("div");explanation.style.marginTop="6px";explanation.textContent=item.e;
+ feedback.appendChild(heading);feedback.appendChild(explanation);
+ scoreText.textContent="Điểm: "+score;next.disabled=false;
+}
+function finishQuiz(){
+ questionArea.hidden=true;resultArea.hidden=false;quizProgress.style.width="100%";
+ document.getElementById("finalScore").textContent=score+"/"+questions.length;
+ var ratio=score/questions.length;
+ document.getElementById("resultTitle").textContent=ratio>=.85?"Xuất sắc — phản xạ rất tốt!":ratio>=.6?"Tiến bộ tốt — ôn thêm vài bẫy nhé!":"Khởi đầu ổn — quay lại thư viện ôn tập nhé!";
+ document.getElementById("resultMessage").textContent=ratio>=.85?"Bạn đã nắm khá chắc các mẫu trọng tâm. Thử tự đặt câu mới để nhớ lâu hơn.":ratio>=.6?"Đọc phần giải thích của các câu sai, đặc biệt là vị trí mệnh đề và cặp liên từ.":"Đừng lo: hãy xem lại công thức gốc, luyện flashcards rồi thử lại. Điểm số là bản đồ ôn tập, không phải nhãn năng lực.";
+ progressText.textContent="Hoàn thành "+questions.length+" câu";scoreText.textContent="Điểm: "+score;next.disabled=true;
+}
+next.addEventListener("click",function(){if(!answered)return;if(index<questions.length-1){index++;loadQuestion();}else{finishQuiz();}});
+function restart(){index=0;score=0;loadQuestion();}
+document.getElementById("restartQuiz").addEventListener("click",restart);
+document.getElementById("playAgain").addEventListener("click",restart);
+loadQuestion();
+})();
+</script>
+</body>
+</html>
